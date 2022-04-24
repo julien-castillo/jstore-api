@@ -43,18 +43,18 @@ class AppFixtures extends Fixture
             $categories[] = $category;
         }
 
-        for ($i=0; $i < 100; $i++) {
-            $article = new Article();
-            $article->setTitle($faker->text(50));
-            $article->setContent($faker->text(6000));
-            $article->setImage($faker->imageUrl());
-            $article->setCreatedAt(new \DateTimeImmutable());
-            $article->addCategory($categories[$faker->numberBetween(0,14)]);
-            $article->setAuthor($users[$faker->numberBetween(0,49)]);
-
-            $manager->persist($article);
-
-        }
+//        for ($i=0; $i < 100; $i++) {
+//            $article = new Article();
+//            $article->setTitle($faker->text(50));
+//            $article->setContent($faker->text(6000));
+//            $article->setImage($faker->imageUrl());
+//            $article->setCreatedAt(new \DateTimeImmutable());
+//            $article->addCategory($categories[$faker->numberBetween(0,14)]);
+//            $article->setAuthor($users[$faker->numberBetween(0,49)]);
+//
+//            $manager->persist($article);
+//
+//        }
             $manager->flush();
     }
 }
